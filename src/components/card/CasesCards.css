@@ -1,0 +1,13 @@
+.card-container {
+    margin: 30px auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+.card-content {
+
+    background-color: aquamarine;
+    margin: 0 3% !important;
+    min-height: 200px;
+
+}

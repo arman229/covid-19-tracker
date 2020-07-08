@@ -1,0 +1,27 @@
+
+.App-header {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    height: auto;
+    align-items: center;
+}
+.App-header > img{
+    margin-left: 16px;
+
+}
+.country-spinner-label {
+    width:60%;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 8px;
+    font-size: larger;
+}
+.country-spinner {
+    padding: 10px;
+    width: 250px;
+    font-weight: bold;
+    float: right;
+    background-color: #f1f1f1;
+}
+
