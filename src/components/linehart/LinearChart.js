@@ -5,7 +5,6 @@ import "./../../triad_ring.gif"
 
 const LinearChart = ({selectedCountrySlug, countryName}) => {
     const [dailyStats, setDailyStats] = useState([])
-    const [loading, setLoading] = useState(true)
     useEffect(() => {
         getDailyStats(selectedCountrySlug)
     }, [selectedCountrySlug])
@@ -44,12 +43,7 @@ const LinearChart = ({selectedCountrySlug, countryName}) => {
     const data = () => {
         var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         const pairList = dailyStats
-        const pairList1 = [
-            {totalConfirmed: 33, reportDate: 22},
-            {totalConfirmed: 43, reportDate: 23},
-            {totalConfirmed: 55, reportDate: 24},
-            {totalConfirmed: 73, reportDate: 25}
-        ]
+
 
         let rows = []
         let columns = []

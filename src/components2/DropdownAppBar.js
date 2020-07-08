@@ -43,7 +43,7 @@ class DropdownAppBar extends React.Component {
     };
 
     render() {
-        const {isFetching, countries} = this.state;
+        const { countries} = this.state;
         const {classes} = this.props;
         return (
             <div className={classes.root}>
