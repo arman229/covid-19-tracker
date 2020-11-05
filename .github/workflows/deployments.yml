@@ -1,19 +1,19 @@
-#name: Contineous integration for covid-app
-#on: push
-#jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: Install Node.js
-#      uses: actions/setup-node@v1.4.2
-#      with:
-#        node-version: 12
-#    - name: Installing Npm packages
-#      run: npm install
-#    - name: Building React App
-#      run: npm run build
-#    - name: Install Surge
-#      run: npm install -g surge
-#    - name: Run surge
-#      run: surge ./build http://covid-19-msusman.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+name: Contineous integration for covid-app
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Node.js
+      uses: actions/setup-node@v1.4.2
+      with:
+        node-version: 12
+    - name: Installing Npm packages
+      run: npm install
+    - name: Building React App
+      run: npm run build
+    - name: Install Surge
+      run: npm install -g surge
+    - name: Run surge
+      run: surge ./build http://covid-19-msusman.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
