@@ -6,4 +6,4 @@ also display the daily covid data in graphical view.
 
 [App Link](http://covid-19-msusman.surge.sh/)
 
-![App Screen shot](https://octodex.github.com/images/yaktocat.png)
+![App Screen shot](https://github.com/msusman1/covid-19-tracker/blob/master/public/covid19-tracker-screenshot.PNG)
