@@ -25,7 +25,7 @@ class CasesCards extends React.Component {
 
         return <div className="card-container">
             <Grid container spacing={3} justify={"center"}>
-                <Grid item xs={6} md={3} component={Card} className="card-content"
+                <Grid item xs={12} md={3} component={Card} className="card-content"
                       style={{"backgroundColor": "#E94B48"}}>
                     <CardContent>
                         <div style={{display: "inline-block", float: "left", minWidth: 200}}>
@@ -48,7 +48,7 @@ class CasesCards extends React.Component {
                         <GroupAddOutlinedIcon style={{fontSize: 75, float: "right"}}/>
                     </CardContent>
                 </Grid>
-                <Grid item xs={6} md={3} component={Card} className="card-content"
+                <Grid item xs={12} md={3} component={Card} className="card-content"
                       style={{"backgroundColor": "#FA9311"}}>
                     <CardContent>
                         <div style={{display: "inline-block", float: "left", minWidth: 200}}>
@@ -70,7 +70,7 @@ class CasesCards extends React.Component {
                         <LocalHotelOutlinedIcon style={{fontSize: 75, float: "right"}}/>
                     </CardContent>
                 </Grid>
-                <Grid item xs={6} md={3} component={Card} className="card-content"
+                <Grid item xs={12} md={3} component={Card} className="card-content"
                       style={{"backgroundColor": "#52AC55"}}>
                     <CardContent>
                         <div style={{display: "inline-block", float: "left", minWidth: 200}}>

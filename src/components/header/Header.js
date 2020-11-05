@@ -20,20 +20,20 @@ class Header extends React.Component {
 
 
     async getCountris() {
-        this.setState({isFetching: true})
+        this.setState({isFetching: true});
         let response = await fetch("https://api.covid19api.com/countries");
         if (response.ok) {
             let global = {
                 "Country": "Global",
                 "Slug": "global",
                 "ISO2": "gb"
-            }
+            };
             let countryList = await response.json();
             countryList.sort((a, b) => (a.Country > b.Country) ? 1 : ((b.Country > a.Country) ? -1 : 0));
-            let newList = [global].concat(countryList)
+            let newList = [global].concat(countryList);
             this.setState({countries: newList, isFetching: false})
         } else {
-            this.setState({isFetching: false})
+            this.setState({isFetching: false});
             return "HTTP-Error: " + response.status
 
         }
@@ -57,7 +57,7 @@ class Header extends React.Component {
             </select>
 
         </div>
-    }
+    };
     progressUi = () => {
         return <div>
             <img style={{

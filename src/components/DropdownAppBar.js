@@ -26,7 +26,7 @@ const useStyles = thm => ({
 });
 
 class DropdownAppBar extends React.Component {
-    state = {selectedSlug: "", countries: [], isFetching: true}
+    state = {selectedSlug: "", countries: [], isFetching: true};
 
     componentDidMount() {
         this.getCountris();
@@ -36,7 +36,7 @@ class DropdownAppBar extends React.Component {
     handleChange = (event) => {
         let value = event.target.value;
         let countryObj = this.state.countries.find(o => o.Slug === value);
-        this.props.spinnerSelectListner({slug:value,country:countryObj.Country})
+        this.props.spinnerSelectListner({slug:value,country:countryObj.Country});
         this.setState({
             selectedSlug: value
         });
@@ -49,7 +49,6 @@ class DropdownAppBar extends React.Component {
             <div className={classes.root}>
                 <AppBar position="static">
                     <Toolbar>
-
                         <Typography className={classes.title} variant="h6" noWrap>
                             Covid-19 Tracker App
                         </Typography>
@@ -79,20 +78,20 @@ class DropdownAppBar extends React.Component {
 
 
     async getCountris() {
-        this.setState({isFetching: true})
+        this.setState({isFetching: true});
         let response = await fetch("https://api.covid19api.com/countries");
         if (response.ok) {
             let global = {
                 "Country": "Global",
                 "Slug": "global",
                 "ISO2": "gb"
-            }
+            };
             let countryList = await response.json();
             countryList.sort((a, b) => (a.Country > b.Country) ? 1 : ((b.Country > a.Country) ? -1 : 0));
-            let newList = [global].concat(countryList)
+            let newList = [global].concat(countryList);
             this.setState({selectedSlug: newList[0].Slug, countries: newList, isFetching: false})
         } else {
-            this.setState({isFetching: false})
+            this.setState({isFetching: false});
             return "HTTP-Error: " + response.status
 
         }

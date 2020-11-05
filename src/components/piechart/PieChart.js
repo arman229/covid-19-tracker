@@ -1,6 +1,5 @@
 import React from "react";
 import {Pie} from "react-chartjs-2";
-import './PieChart.css';
 
 class PieChart extends React.Component {
 
@@ -28,11 +27,10 @@ class PieChart extends React.Component {
             }]
         };
         return (
-            <div  className="pieCard" >
-                <strong>Recovery Rate:{this.props.countryName}</strong>
+            <div   >
+                <strong>Recovery Rate: {this.props.countryName}</strong>
                 <hr/>
                 <Pie height={200} data={datum}/>
-
             </div>
         )
     }
